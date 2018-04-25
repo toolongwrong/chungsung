@@ -12,8 +12,9 @@ y3 = sin(3*x);
 plot(x, y1, '--r');
 
 hold on;
+grid on;
 
-plot(x, y2,'--b');
+plot(x, y2,'b');
 
 hold on;
 
