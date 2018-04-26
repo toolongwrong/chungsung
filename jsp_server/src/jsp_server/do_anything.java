@@ -41,7 +41,7 @@ public class do_anything extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		int korean, math, eng, avg;
-		String name, kk="한글";
+		String name;
 
 	
 		
