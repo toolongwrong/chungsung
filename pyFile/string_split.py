@@ -1,8 +1,13 @@
 class Split_String:
     def __init__(self):
+        from konlpy.tag import Kkma
+        from konlpy.utils import pprint
         self.string =[];
     def split_String_Method(self,String):
         self.string = String.split(" ");
+        self.kkma = Kkma()
+        pprint(kkma.pos(uString))
+        pprint(kkma.nouns(uString)
         return self.string
 
 class Insert_db:
@@ -28,6 +33,5 @@ class Insert_db:
 import first_setting
 import os
 os.system('rm -r __pycache__')
-
         
 
