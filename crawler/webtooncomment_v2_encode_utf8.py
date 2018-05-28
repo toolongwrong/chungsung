@@ -42,7 +42,7 @@ driver.implicitly_wait(5)
 # 웹 페이지 로드 기다림(5sec)
 # driver.get 시에만 적용되는듯
 
-f = open('comments', 'w', encoding='utf-8')
+f = open('comments.txt', 'w', encoding='utf-8')
 
 try :
     for no in range( int(start), int(end) + 1) : 
@@ -82,9 +82,7 @@ try :
                 for m in range(len(comment_contents) - 1, -1, -1) :
                     if comment_dates[m] != upload_date :
                         try :
-                            temp = comment_contents[m].text + '\n'
-                            temp.encode('utf-8')
-                            f.write(temp)
+                            f.write(comment_contents[m].text + '\n')
                         except :
                             pass
                     else :
