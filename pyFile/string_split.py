@@ -3,11 +3,9 @@ class Split_String:
         from konlpy.tag import Kkma
         from konlpy.utils import pprint
         self.string =[];
-    def split_String_Method(self,String):
-        self.string = String.split(" ");
         self.kkma = Kkma()
-        pprint(kkma.pos(uString))
-        pprint(kkma.nouns(uString)
+    def split_String_Method(self,String):
+        self.string = self.kkma.pos(String)
         return self.string
 
 class Insert_db:
@@ -32,6 +30,14 @@ class Insert_db:
 
 import first_setting
 import os
-os.system('rm -r __pycache__')
-        
+os.system('rm -r __pycache__')    
+with open("test2.txt",mode = "r",encoding="utf-8") as open_file:
+    list_String = []
+    string_commend = Split_String()
+    while True:
+        k = open_file.readline()
+        if not k : break
+        list_String.append(string_commend.split_String_Method(k))
+for i in list_String:
+    print(i)
 
