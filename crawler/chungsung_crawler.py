@@ -137,6 +137,8 @@ class Webdriver_controller:
 ######
 
 ### example
+# import chungsung_crawler
+#
 # print("titleId : " , end="")
 # titleId = input()
 # print("start : ", end="")
@@ -144,7 +146,7 @@ class Webdriver_controller:
 # print("end : ", end="")
 # end = input()
     
-# toon = Webtoon_info(titleId, start, end)
-# webd = Webdriver_controller(0.4, 0) # (sleeptime, isheadless)
+# toon = chungsung_crawler.Webtoon_info(titleId, start, end)
+# webd = chugnsung_crawler.Webdriver_controller(0.4, 0) # (sleeptime, isheadless)
 
-# Crawling(toon, webd, 'qwe.txt')
+# chungsung_crawler.Crawling(toon, webd, 'qwe.txt')
