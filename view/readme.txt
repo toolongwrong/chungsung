@@ -1,18 +1,18 @@
 test.js
--> ÆÄÀÌ½ã ·ÎÁ÷ ¼öÇàÇÏ°í °á°ú°ª Å¬¶óÀÌ¾ðÆ® ¼­¹ö¿¡ º¸³»´Â ¼­¹ö ÆÄÀÏ
+-> íŒŒì´ì¬ ë¡œì§ ìˆ˜í–‰í•˜ê³  ê²°ê³¼ê°’ í´ë¼ì´ì–¸íŠ¸ ì„œë²„ì— ë³´ë‚´ëŠ” ì„œë²„ íŒŒì¼
 
 sample.py
--> ÀÚ¹Ù½ºÅ©¸³Æ®¿¡¼­ ½ÇÇà½ÃÅ°°í, °á°ú¹°À» ¹ñ¾î³¾ ÆÄÀÌ½ã ÆÄÀÏ
-ÆÄÀÌ½ã¿¡¼­ print() ÇØ¼­ ¹®ÀÚ¿­ÀÌµç ¹¹µç Ãâ·ÂÇÏ¸é, test.js ¿¡¼­ "results" º¯¼ö¿¡ ¹è¿­·Î ÀúÀåµÈ´Ù
+-> ìžë°”ìŠ¤í¬ë¦½íŠ¸ì—ì„œ ì‹¤í–‰ì‹œí‚¤ê³ , ê²°ê³¼ë¬¼ì„ ë±‰ì–´ë‚¼ íŒŒì´ì¬ íŒŒì¼
+íŒŒì´ì¬ì—ì„œ print() í•´ì„œ ë¬¸ìžì—´ì´ë“  ë­ë“  ì¶œë ¥í•˜ë©´, test.js ì—ì„œ "results" ë³€ìˆ˜ì— ë°°ì—´ë¡œ ì €ìž¥ëœë‹¤
 
 home.html
--> Å¬¶óÀÌ¾ðÆ® ¼­¹ö
-ÄÜ¼Ö¿¡¼­ ÇØ´ç Æú´õ·Î ÀÌµ¿ÇÑ ´ÙÀ½
+-> í´ë¼ì´ì–¸íŠ¸ ì„œë²„
+ì½˜ì†”ì—ì„œ í•´ë‹¹ í´ë”ë¡œ ì´ë™í•œ ë‹¤ìŒ
 live-server home.html --port=5500
-À¸·Î ½ÇÇàÇÏ¸é Å¬¶óÀÌ¾ðÆ® ¼­¹ö°¡ ¿­¸°´Ù. 5500Æ÷Æ®¸¸ Çã¿ëÇÔ
+ìœ¼ë¡œ ì‹¤í–‰í•˜ë©´ í´ë¼ì´ì–¸íŠ¸ ì„œë²„ê°€ ì—´ë¦°ë‹¤. 5500í¬íŠ¸ë§Œ í—ˆìš©í•¨
 
 
 npm install express
 npm install python-shell
 npm install live-server -g
-// global ¿É¼ÇÀ» ³Ö¾î ÄÜ¼Ö ¸í·É¾î·Î ½ÇÇàÇÒ ¼ö ÀÖÀ½
+// global ì˜µì…˜ì„ ë„£ì–´ ì½˜ì†” ëª…ë ¹ì–´ë¡œ ì‹¤í–‰í•  ìˆ˜ ìžˆìŒ
