@@ -1,3 +1,6 @@
+// npm install express
+// npm install python-shell
+
 var express = require('express');
 var app = express();
 
@@ -25,8 +28,10 @@ app.listen(8080, function() {
 });
 
 app.get('/', function (req, res) {
+    // get 방식으로 요청 받았을 시, '/' -> http://127.0.0.1:8080/ 접속 시를 뜻함
     py_shell.run('sample.py', py_options, function(err, results) {
         if (err) throw err;
         res.json(results);
+        // json 형태로 전송, 클라이언트에서 parsing 해서 사용함
     });
 });

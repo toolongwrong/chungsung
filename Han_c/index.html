@@ -1,3 +1,9 @@
+<!--
+오픈소스 소프트웨어 공학 1조
+112187 한치원
+112196 송제섭
+122048 이인규
+-->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -11,25 +17,30 @@
         <script>
             var xhr = new XMLHttpRequest();
             xhr.open('GET', "http://127.0.0.1:8080");
+            // get 방식으로 요청 보냄
             xhr.send(); 
             
             // response 받을 시
             xhr.addEventListener('load', function() {
                 var data = JSON.parse(xhr.response);
+                // 파싱해서 array로 만듬
                 console.log(data);
 
-                var write_html = document.querySelector('#contents1');
+                var contents1 = document.querySelector('#contents1');
+                // html에서 id가 contents1 인 요소를 선택함
                 
                 for (i in data) {
-                    write_html.innerText += ("\n" + data[i]);
+                    contents1.innerText += data[i];
+                    // html에 출력함
                 }
             });
         </script>
         <title>오픈소스 소프트웨어 공학 프로젝트_1조</title>
     </head>
     <body>
+                
         <section id="wrap">
-
+        
         <!--입력 박스-->
         <div class="inputBox">
             <label for="textBox1">
@@ -51,7 +62,6 @@
 
         <div class="contents">
         <aside class="commonContents" id="contents1">
-        컨텐츠 요소 들어가는 공간1
         </aside>
         <aside class="commonContents" id="contents2" style="display:none;">
         컨텐츠 요소 들어가는 공간2
