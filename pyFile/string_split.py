@@ -123,12 +123,50 @@ class Insert_db:
         finally:
             self.conn.close()
         return count+1
+    def update_N(self):
+        try :
+            conn = pymysql.connect(host = self.URL,user=self.ID,password = self.PW, db=self.DBTABLE,charset ='utf8',autocommit=True)
+            sql2 = "select N from tagging where N is not null"
+            curs = conn.cursor()
+            curs.execute(sql2)
+            rows = curs.fetchall()
+            tuple_a = ()
+            list_a = ()
+            curs2 = conn.cursor()
+            for row in rows:
+                print(row)
+                k = int(input())
+                tuple_a =(k,)+row
+                sql = """update tagging set counting = %s where N = %s"""
+                curs2.execute(sql,tuple_a)
+        finally:
+            conn.close()
+    def update_P(self):
+        try :
+            conn = pymysql.connect(host = self.URL,user=self.ID,password = self.PW, db=self.DBTABLE,charset ='utf8',autocommit=True)
+            sql2 = "select P from tagging where P is not null and counting is null"
+            curs = conn.cursor()
+            curs.execute(sql2)
+            rows = curs.fetchall()
+            tuple_a = ()
+            list_a = ()
+            curs2 = conn.cursor()
+            for row in rows:
+                print(row)
+                k = int(input())
+                tuple_a =(k,)+row
+                sql = """update tagging set counting = %s where P = %s"""
+                curs2.execute(sql,tuple_a)
+        finally:
+            conn.close()
             
 import first_setting
 import os
 import pymysql
+
 os.system('rm -r __pycache__')    
-with open("test2.txt",mode = "r",encoding="utf-8") as open_file:
+'''
+with open("380_384.txt",mode = "r",encoding="utf-8") as open_file:
     list_String = []
     string_commend = Split_String()
     while True:
@@ -138,7 +176,10 @@ with open("test2.txt",mode = "r",encoding="utf-8") as open_file:
         for i in tuple_string:
             list_String.append(i)
 list_String.append(('N','송제섭'))
+'''
 dbconnection = Insert_db("songmag","1234","localhost","OpenSW")
+
+'''
 for i in list_String:
     if 'N' in i[1] :
         dbconnection.insert_tagging_N(i[0])
@@ -154,3 +195,5 @@ for i in list_String:
         dbconnection.insert_tagging_J(i[0])
     if 'X' in i[1] :
         dbconnection.insert_tagging_X(i[0])
+'''
+dbconnection.update_P()
