@@ -159,13 +159,12 @@ class Insert_db:
                 curs2.execute(sql,tuple_a)
         finally:
             conn.close()
-            
+'''            
 import first_setting
 import os
 import pymysql
 
 os.system('rm -r __pycache__')    
-'''
 with open("380_384.txt",mode = "r",encoding="utf-8") as open_file:
     list_String = []
     string_commend = Split_String()
@@ -176,10 +175,8 @@ with open("380_384.txt",mode = "r",encoding="utf-8") as open_file:
         for i in tuple_string:
             list_String.append(i)
 list_String.append(('N','송제섭'))
-'''
 dbconnection = Insert_db("songmag","1234","localhost","OpenSW")
 
-'''
 for i in list_String:
     if 'N' in i[1] :
         dbconnection.insert_tagging_N(i[0])
@@ -195,5 +192,5 @@ for i in list_String:
         dbconnection.insert_tagging_J(i[0])
     if 'X' in i[1] :
         dbconnection.insert_tagging_X(i[0])
-'''
 dbconnection.update_P()
+'''
