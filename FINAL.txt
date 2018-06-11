@@ -1,5 +1,16 @@
+Git 주소 : https://github.com/toolongwrong/chungsung
 
 
+Git 내의 디렉토리
 
+crawler : 제작한 크롤러 소스 코드를 모아둔 파일
+             최종 파일은  chungsung_crawler.py, 클래스로 묶어두어서 새로운 파일에서 import 해 사용해야 함
+             그 샘플 파일이 sample.py
              
+pyFile : 크롤링한 데이터를 품사별로 나누는 코드
+           디비 연결이 완성되지 않음, 로컬로 텍스트 파일을 생성하는 것으로 대체함
            
+Han_c : 클라이언트 서버와 로직을 수행할 서버 파일들,
+           index.html 파일이 클라이언트에서 보게 될 view에 해당하고
+           py_shell.js 가 클라이언트에서 request를 받아 로직을 수행하여 클라이언트에 response를 보냄
+           -> 자세한 실행방법은 폴더 내의 readme.txt 참고
