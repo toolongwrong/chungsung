@@ -13,13 +13,13 @@ def extract_date(string) :
 ######
 
 sleeptime = 0.5
-
-print("titleId :" , end="")
 titleId = input()
-print("start : ", end="")
+print("titleId :" , title+"")
 start = input()
-print("end : ", end="")
+print("start : ", start+"")
 end = input()
+print("end : ", end+"")
+
 
 html = urlopen("https://comic.naver.com/webtoon/detail.nhn?titleId=" + titleId + "&no=" + str(start))
 bs0bj = BeautifulSoup(html, "html.parser")
