@@ -1,4 +1,8 @@
 import tensorflow as tf
+import os
+
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 x_data = [[1,7],[1,8],[1,10],[1,2],[1,5],[1,12],[1,23],[1,24],[1,52]]
@@ -28,7 +32,6 @@ with tf.Session() as sess:
         
         cost_val, _ = sess.run([cost, train], feed_dict={X: x_data, Y: y_data})
 
-        print(step, cost_val, sess.run(W), sess.run(b))
 
     print("\n TEST")
     print("X: 5, Y:", sess.run(predicted, feed_dict={X:[[1,10]]}))
