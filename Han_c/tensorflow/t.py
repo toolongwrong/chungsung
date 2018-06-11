@@ -34,5 +34,5 @@ with tf.Session() as sess:
 
 
     print("\n TEST")
-    print("X: 5, Y:", sess.run(predicted, feed_dict={X:[[1,10]]}))
-    print("X: 2.5, Y:", sess.run(predicted, feed_dict={X:[[1,20]]}))
+    print("382, Y:", sess.run(predicted, feed_dict={X:[[1,10]]}))
+    print("400, Y:", sess.run(predicted, feed_dict={X:[[1,20]]}))

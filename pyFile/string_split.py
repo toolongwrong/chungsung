@@ -161,11 +161,11 @@ class Insert_db:
             conn.close()
 import first_setting
 import os
-import pymysql
-'''
+# import pymysql
+
 os.system('rm -r __pycache__')    
 
-with open("380_384.txt",mode = "r",encoding="utf-8") as open_file:
+with open("380.txt",mode = "r",encoding="utf-8") as open_file:
     list_String = []
     string_commend = Split_String()
     while True:
@@ -175,23 +175,31 @@ with open("380_384.txt",mode = "r",encoding="utf-8") as open_file:
         for i in tuple_string:
             list_String.append(i)
 list_String.append(('N','송제섭'))
-'''
-dbconnection = Insert_db("songmag","1234","localhost","OpenSW")
-'''
-for i in list_String:
-    if 'N' in i[1] :
-        dbconnection.insert_tagging_N(i[0])
-    if 'E' in i[1] :
-        dbconnection.insert_tagging_E(i[0])
-    if 'P' in i[1] :
-        dbconnection.insert_tagging_P(i[0])
-    if 'M' in i[1] :
-        dbconnection.insert_tagging_M(i[0])
-    if 'I' in i[1] :
-        dbconnection.insert_tagging_I(i[0])
-    if 'J' in i[1] :
-        dbconnection.insert_tagging_J(i[0])
-    if 'X' in i[1] :
-        dbconnection.insert_tagging_X(i[0])
-'''
-dbconnection.update_P()
+
+# dbconnection = Insert_db("songmag","1234","localhost","OpenSW")
+
+with open("test_string.txt","w") in open_file:
+    for i in list_String:
+        if 'N' in i[1] :
+            open_file.write("N > " +i)
+           # dbconnection.insert_tagging_N(i[0])
+        if 'E' in i[1] :
+            open_file.write("E > " +i)
+            #dbconnection.insert_tagging_E(i[0])
+        if 'P' in i[1] :
+            open_file.write("P > " +i)
+            #dbconnection.insert_tagging_P(i[0])
+        if 'M' in i[1] :
+            open_file.write("M > " +i)
+            #dbconnection.insert_tagging_M(i[0])
+        if 'I' in i[1] :
+            open_file.write("I > " +i)
+            #dbconnection.insert_tagging_I(i[0])
+        if 'J' in i[1] :
+            open_file.write("J > " +i)
+            #dbconnection.insert_tagging_J(i[0])
+        if 'X' in i[1] :
+            open_file.write("X > " +i)
+            #dbconnection.insert_tagging_X(i[0])
+
+# dbconnection.update_P()
